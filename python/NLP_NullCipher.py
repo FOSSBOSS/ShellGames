@@ -6,7 +6,7 @@ The algorythic complexity to generate N offset null type ciphers is low.
 The complexity in generating them, to sound like reasonable messages is high.
 This is another attempt at a null cipher generator, this time using NLP.
 
-Put your text to encipher into core.txt in the same folder.
+core.txt is a dictionary file of your choosing. 
 '''
 # Load the NLP model
 nlp = spacy.load("en_core_web_sm")
