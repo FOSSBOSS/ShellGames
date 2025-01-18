@@ -1,0 +1,2 @@
+An OEM sent me this durring a service call and was like: run this as root on your linux computer. 
+Thats a big nope dawg. WTF is this thing even? an Xar with a bunch of other packages?
