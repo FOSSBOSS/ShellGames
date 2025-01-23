@@ -1,0 +1,3 @@
+sudo apt install python3-matplotlib
+OG intettion was to make a sonar on the Pi, 
+but IDK I forgot
