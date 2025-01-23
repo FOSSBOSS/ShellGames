@@ -1,3 +1,4 @@
 sudo apt install python3-matplotlib
 OG intettion was to make a sonar on the Pi, 
+with an HC-SR04 ultrasonic module....
 but IDK I forgot
