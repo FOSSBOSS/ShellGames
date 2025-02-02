@@ -11,7 +11,32 @@ network={
 
 # Enable gadet mode in config.txt
 # do a distro check here.bullseye vs bookworm
-dtoverlay=dwc2
+
+    code_name=$(cat /etc/os-release | grep VERSION_CODENAME=)
+    cmd_file="/boot/firmware/cmdline.txt"
+    code_name=${code_name#VERSION_CODENAME=}
+    if [ "${code_name}" = "bookworm" ];then
+        cmd_file="/boot/firmware/cmdline.txt"
+        sudo echo "dtoverlay=dwc2" >> $cmd_file
+        sudo echo "modules-load=dwc2,g_ether" >> $cmd_file
+        if ! sudo bash -c "echo 'dtoverlay=dwc2' >> $cmd_file"; then
+           echo "Failed to write to $cmd_file"
+           exit 1
+           fi
+    elif [ "${code_name}" = "bullseye" ];then
+        cmd_file="/boot/cmdline.txt" 
+        sudo echo "dtoverlay=dwc2" >> $cmd_file
+        sudo echo "modules-load=dwc2,g_ether" >> $cmd_file
+        if ! sudo bash -c "echo 'dtoverlay=dwc2' >> $cmd_file"; then
+           echo "Failed to write to $cmd_file"
+           exit 1
+           fi
+    else
+    echo "unknow distro. ... I dont know where your config files are"
+    echo "it may be possible to set your pi as a gadet keyboard, "
+    echo "with instructions from this script if you can properly  "
+    echo "source your config.txt file"
+    fi
 
 # Open cmdline.txt and add modules-load=dwc2,g_ether immediately after rootwait.
 
