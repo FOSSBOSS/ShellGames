@@ -1,13 +1,13 @@
 #!/bin/bash
 # in wpa_supplicant.conf
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-country=US
+#ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+#update_config=1
+#country=US
 
-network={
-    ssid="YourSSID"
-    psk="YourPassword"
-}
+#network={
+#    ssid="YourSSID"
+#    psk="YourPassword"
+#}
 
 # Enable gadet mode in config.txt
 # do a distro check here.bullseye vs bookworm
@@ -70,9 +70,17 @@ ln -s functions/hid.usb0 configs/c.1/
 echo dwc2 > UDC
 
 # test piKey.py needs sudo for virtual keyboard... but Im on a keyboard RN!
-
+#check pip for pynput library
+depends="pynput"
+    if pip show "$depends" &> /dev/null; then
+        echo "$depends is installed."
+    else
+        echo "$depends is not installed. Install? press ENTER or CTRL+C to exit"
+        pip install $depends # just do it lol
+    fi
 # in /etc/rc.local
 # put your script in the $PATH (gotta pickone lol )
-sudo echo "/$HOME/piGadget/piKey.sh" >> /etc/rc.local
+# might as well write the script now, and put it in a place.
+#sudo echo "/$HOME/piGadget/piKey.sh" >> /etc/rc.local
 
 
