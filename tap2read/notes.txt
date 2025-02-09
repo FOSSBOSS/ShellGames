@@ -11,3 +11,6 @@ This is sufficent to block NFC reading, while the cover is closed.
 The added thickness of having this trap door, is also sufficent to make scanning dificult, if the tag is behind the wooden plate I made.
 I made a thinner display plate using craft paper, which aliviates most of this. 
 
+The android App "nfc-tools" makes it possible to read and write the tag, without using an arduino.
+There may be a way to lock the st25dv nfc tag to prevent writing data, but I havent messed with that.
+
