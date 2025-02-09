@@ -1,0 +1,5 @@
+I did this on an arduino Uno, which is unadvisable. You only really need a webserver, an NFC compatable phone, and a ST25DV16
+or one of the other flavors of ST25DV programable NFC tags.
+
+There are other versions with more or less memory. 
+I'll fill in specifics later.
