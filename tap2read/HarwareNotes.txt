@@ -1,5 +1,14 @@
 I did this on an arduino Uno, which is unadvisable. You only really need a webserver, an NFC compatable phone, and a ST25DV16
-or one of the other flavors of ST25DV programable NFC tags.
+or one of the other flavors of ST25DV programable NFC tags. ST25SV16 has 16KB memory, where ST25SV32 has 32KB... and so on. 
 
 There are other versions with more or less memory. 
-I'll fill in specifics later.
+https://www.adafruit.com/product/4701
+cost 4$.
+
+Supporting library:
+https://github.com/stm32duino/ST25DV
+
+Datasheet:
+https://www.st.com/resource/en/datasheet/st25dv64k.pdf
+
+
