@@ -1,0 +1,6 @@
+Resources:
+GPIO Pins:
+https://pinout.xyz/
+DropMix Mainboard IO
+https://docs.google.com/spreadsheets/d/1rFE-yX02_KRZmvyGcnrha99kWurAoYPO_0ycP2z_Ny0/edit?usp=sharing
+
