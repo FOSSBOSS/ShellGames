@@ -1,0 +1,27 @@
+ sudo sg_inq /dev/sg1
+invalid VPD response; probably a STANDARD INQUIRY response
+standard INQUIRY:
+  PQual=0  PDT=0  RMB=1  LU_CONG=0  hot_pluggable=0  version=0x02  [SCSI-2]
+  [AERC=0]  [TrmTsk=0]  NormACA=0  HiSUP=0  Resp_data_format=2
+  SCCS=0  ACC=0  TPGS=0  3PC=0  Protect=0  [BQue=0]
+  EncServ=0  MultiP=0  [MChngr=0]  [ACKREQQ=0]  Addr16=0
+  [RelAdr=0]  WBus16=0  Sync=0  [Linked=0]  [TranDis=0]  CmdQue=0
+    length=36 (0x24)   Peripheral device type: disk
+ Vendor identification: DV17    
+ Product identification:  DEVICE V1.00   
+ Product revision level: 1.00
+
+ sudo dd if=/dev/sdb bs=512 count=1 | hexdump -C 
+dd: failed to open '/dev/sdb': No medium found
+
+$ sudo usb_modeswitch -v 1224 -p 2725
+Look for default devices ...
+ Found devices in default mode (1)
+Access device 064 on bus 001
+Get the current device configuration ...
+Current configuration number is 1
+Use interface number 0
+ with class 8
+Warning: no switching method given. See documentation
+-> Run lsusb to note any changes. Bye!
+
