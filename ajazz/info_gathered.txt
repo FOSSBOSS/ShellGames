@@ -1,0 +1,349 @@
+trying to add ajazz display. embeded tech seems to be Racecar usb monitor.
+messing with x11 has led to mamny an abrupt system log out and loss of many notes.
+$ sudo dmesg -c
+[ 9156.529640] perf: interrupt took too long (3163 > 3145), lowering kernel.perf_event_max_sample_rate to 63000
+[ 9162.900129] usb 1-11.2: new high-speed USB device number 23 using xhci_hcd
+[ 9163.000313] usb 1-11.2: New USB device found, idVendor=1a40, idProduct=0201, bcdDevice= 1.00
+[ 9163.000317] usb 1-11.2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[ 9163.000319] usb 1-11.2: Product: USB 2.0 Hub [MTT]
+[ 9163.001053] hub 1-11.2:1.0: USB hub found
+[ 9163.001110] hub 1-11.2:1.0: 7 ports detected
+[ 9163.308130] usb 1-11.2.3: new full-speed USB device number 24 using xhci_hcd
+[ 9163.433667] usb 1-11.2.3: New USB device found, idVendor=1a86, idProduct=e5e3, bcdDevice= 2.00
+[ 9163.433672] usb 1-11.2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=1
+[ 9163.433674] usb 1-11.2.3: Product: Touch Screen
+[ 9163.433675] usb 1-11.2.3: Manufacturer: HaiLian
+[ 9163.433675] usb 1-11.2.3: SerialNumber: HaiLian
+[ 9168.542071] hid-multitouch 0003:1A86:E5E3.0018: failed to fetch feature 2
+[ 9168.542149] input: HaiLian Touch Screen as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.3/1-11.2.3:1.0/0003:1A86:E5E3.0018/input/input43
+[ 9168.600175] hid-multitouch 0003:1A86:E5E3.0018: input,hidraw8: USB HID v1.10 Device [HaiLian Touch Screen] on usb-0000:00:14.0-11.2.3/input0
+[ 9168.700078] usb 1-11.2.4: new full-speed USB device number 25 using xhci_hcd
+[ 9168.805251] usb 1-11.2.4: New USB device found, idVendor=28e9, idProduct=3012, bcdDevice= 1.02
+[ 9168.805256] usb 1-11.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 9168.805257] usb 1-11.2.4: Product: AKP846
+[ 9168.805258] usb 1-11.2.4: Manufacturer: SmartCloud
+[ 9168.817553] input: SmartCloud AKP846 as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.4/1-11.2.4:1.0/0003:28E9:3012.0019/input/input44
+[ 9169.132130] hid-generic 0003:28E9:3012.0019: input,hidraw9: USB HID v1.11 Keyboard [SmartCloud AKP846] on usb-0000:00:14.0-11.2.4/input0
+[ 9169.132475] hid-generic 0003:28E9:3012.001A: hiddev3,hidraw10: USB HID v1.11 Device [SmartCloud AKP846] on usb-0000:00:14.0-11.2.4/input1
+[ 9169.133093] input: SmartCloud AKP846 Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.4/1-11.2.4:1.2/0003:28E9:3012.001B/input/input45
+[ 9169.133153] input: SmartCloud AKP846 System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.4/1-11.2.4:1.2/0003:28E9:3012.001B/input/input46
+[ 9169.192180] input: SmartCloud AKP846 Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.4/1-11.2.4:1.2/0003:28E9:3012.001B/input/input47
+[ 9169.192223] input: SmartCloud AKP846 Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.4/1-11.2.4:1.2/0003:28E9:3012.001B/input/input48
+[ 9169.404129] hid-generic 0003:28E9:3012.001B: input,hidraw11: USB HID v1.11 Mouse [SmartCloud AKP846] on usb-0000:00:14.0-11.2.4/input2
+[ 9169.404509] hid-generic 0003:28E9:3012.001C: hiddev4,hidraw12: USB HID v1.11 Device [SmartCloud AKP846] on usb-0000:00:14.0-11.2.4/input3
+[ 9169.628073] usb 1-11.2.7: new high-speed USB device number 26 using xhci_hcd
+[ 9169.733409] usb 1-11.2.7: New USB device found, idVendor=34c7, idProduct=2114, bcdDevice= 0.00
+[ 9169.733414] usb 1-11.2.7: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 9169.733415] usb 1-11.2.7: Product: USB DISP
+[ 9169.733416] usb 1-11.2.7: Manufacturer: RACERTECH
+[ 9169.733417] usb 1-11.2.7: SerialNumber: 888888888
+[ 9169.968066] usb 1-11.2.2: new high-speed USB device number 27 using xhci_hcd
+[ 9170.068329] usb 1-11.2.2: New USB device found, idVendor=1224, idProduct=2725, bcdDevice= 1.00
+[ 9170.068333] usb 1-11.2.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 9170.068335] usb 1-11.2.2: Product: USB PHY 2.0
+[ 9170.068336] usb 1-11.2.2: Manufacturer: Jieli Technology
+[ 9170.069502] usb-storage 1-11.2.2:1.0: USB Mass Storage device detected
+[ 9170.092070] scsi host6: usb-storage 1-11.2.2:1.0
+[ 9171.100328] scsi 6:0:0:0: Direct-Access     DV17      DEVICE V1.00    1.00 PQ: 0 ANSI: 2
+[ 9171.100690] sd 6:0:0:0: [sdb] Media removed, stopped polling
+[ 9171.101588] sd 6:0:0:0: Attached scsi generic sg1 type 0
+[ 9171.102612] sd 6:0:0:0: [sdb] Attached SCSI removable disk
+
+
+
+https://www.racer-tech.com/en/file-share
+l@cker:~$ xrandr --query
+xrandr: Failed to get size of gamma for output default
+Screen 0: minimum 4096 x 2160, current 4096 x 2160, maximum 4096 x 2160
+default connected 4096x2160+0+0 0mm x 0mm
+   4096x2160      0.00* 
+#########################################################################
+ $cat /sys/class/drm/card2/card2-DVI-I-2/edid | edid-decode
+edid-decode (hex):
+
+00 ff ff ff ff ff ff 00 05 d7 00 00 00 00 00 00
+ff 22 01 03 80 32 1f 78 07 ee 95 a3 54 4c 99 26
+0f 50 54 00 00 00 01 01 01 01 01 01 01 01 01 01
+01 01 01 01 01 01 60 18 80 a0 70 e0 14 10 30 20
+3a 00 40 90 20 00 00 02 00 00 00 fd 00 17 f0 0f
+ff 06 00 0a 20 20 20 20 20 20 00 00 00 fc 00 31
+39 32 30 78 34 34 30 20 43 56 54 0a 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 13
+
+02 03 18 40 23 09 06 07 67 03 0c 00 00 00 10 0c
+67 d8 5d c4 01 0c 80 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 eb
+
+----------------
+
+Block 0, Base EDID:
+  EDID Structure Version & Revision: 1.3
+  Vendor & Product Identification:
+    Manufacturer: ANW
+    Model: 0
+    Model year: 2024
+  Basic Display Parameters & Features:
+    Digital display
+    Maximum image size: 50 cm x 31 cm
+    Gamma: 2.20
+    Monochrome or grayscale display
+    Default (sRGB) color space is primary color space
+    First detailed timing is the preferred timing
+    Supports GTF timings within operating range
+  Color Characteristics:
+    Red  : 0.6396, 0.3300
+    Green: 0.2998, 0.5996
+    Blue : 0.1503, 0.0595
+    White: 0.3134, 0.3291
+  Established Timings I & II: none
+  Standard Timings: none
+  Detailed Timing Descriptors:
+    DTD 1:  1920x480    60.000 Hz   4:1    30.000 kHz  62.400 MHz (analog composite, 576 mm x 144 mm)
+                 Hfront   48 Hsync  32 Hback  80 Hpol N
+                 Vfront    3 Vsync  10 Vback   7 Vpol N
+  Display Range Limits:
+    Monitor ranges (GTF): 23-240 Hz V, 15-255 kHz H, max dotclock 60 MHz
+    Display Product Name: '1920x440 CVT'
+    Empty Descriptor
+  Extension blocks: 1
+Checksum: 0x13
+
+----------------
+
+Block 1, CTA-861 Extension Block:
+  Revision: 3
+  Basic audio support
+  Native detailed modes: 0
+  Audio Data Block:
+    Linear PCM:
+      Max channels: 2
+      Supported sample rates (kHz): 48 44.1
+      Supported sample sizes (bits): 24 20 16
+  Vendor-Specific Data Block (HDMI), OUI 00-0C-03:
+    Source physical address: 0.0.0.0
+    DC_30bit
+    Maximum TMDS clock: 60 MHz
+  Vendor-Specific Data Block (HDMI Forum), OUI C4-5D-D8:
+    Version: 1
+    Maximum TMDS Character Rate: 60 MHz
+    SCDC Present
+Checksum: 0xeb
+
+
+ #########################################################################  
+l@cker:~$ cvt 1920 480 60
+
+# 1920x480 59.79 Hz (CVT) hsync: 29.90 kHz; pclk: 71.75 MHz
+Modeline "1920x480_60.00"   71.75  1920 1976 2160 2400  480 483 493 500 -hsync +vsync
+
+xrandr --newmode "1920x480_60.00" 71.75  1920 1976 2160 2400  480 483 493 500 -hsync +vsync
+
+xrandr --newmode "1920x480_60.00" 71.75  1920 1976 2160 2400  480 483 493 500 -hsync +vsync
+xrandr: Failed to get size of gamma for output default
+##################### SEEK pkgs & reboot ##############################################################
+sudo apt install dkms
+sudo apt install evdi-dkms
+sudo apt install dkms libdrm-dev libssl-dev
+
+sudo apt install displaylink-driver
+
+######################################################################################################
+sudo cp /etc/X11/xorg.conf.d/20-evdi.conf /etc/X11/xorg.conf.d/20-evdi.conf_bkp
+sudo vim /etc/X11/xorg.conf.d/20-evdi.conf
+
+Section "Device"
+    Identifier "DisplayLink"
+    Driver "modesetting"
+    Option "AccelMethod" "none"
+    Option "kmsdev" "/dev/dri/card2"
+EndSection
+
+Section "Screen"
+    Identifier "Screen0"
+    Device "DisplayLink"
+    Monitor "Monitor0"
+    DefaultDepth 24
+    SubSection "Display"
+        Depth 24
+        Modes "1920x480"
+    EndSubSection
+EndSection
+
+Section "Monitor"
+    Identifier "Monitor0"
+    Option "PreferredMode" "1920x480"
+EndSection
+
+
+
+xrandr --addmode DVI-I-2 "1920x480_60.00"
+
+https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
+
+try display link drivers. the racertech driver is a derivative of this.
+the included gzip file is not an actual gzip, decompress with tar -xvf evdi.tar.gz
+then run make, sudo make install.
+evdi display drivers.....
+
+poked around the jeili usb device, it seems to be non writable, maybe its a nand flash. 
+Despite showing up as a usb filesystem. I suspect that device holds the logo image, and may be a read only system, 
+although I can not read it. I suspect a properly compiled firmware might read from this device. 
+
+ sudo sg_inq /dev/sg1
+invalid VPD response; probably a STANDARD INQUIRY response
+standard INQUIRY:
+  PQual=0  PDT=0  RMB=1  LU_CONG=0  hot_pluggable=0  version=0x02  [SCSI-2]
+  [AERC=0]  [TrmTsk=0]  NormACA=0  HiSUP=0  Resp_data_format=2
+  SCCS=0  ACC=0  TPGS=0  3PC=0  Protect=0  [BQue=0]
+  EncServ=0  MultiP=0  [MChngr=0]  [ACKREQQ=0]  Addr16=0
+  [RelAdr=0]  WBus16=0  Sync=0  [Linked=0]  [TranDis=0]  CmdQue=0
+    length=36 (0x24)   Peripheral device type: disk
+ Vendor identification: DV17    
+ Product identification:  DEVICE V1.00   
+ Product revision level: 1.00
+
+ sudo dd if=/dev/sdb bs=512 count=1 | hexdump -C 
+dd: failed to open '/dev/sdb': No medium found
+
+$ sudo usb_modeswitch -v 1224 -p 2725
+Look for default devices ...
+ Found devices in default mode (1)
+Access device 064 on bus 001
+Get the current device configuration ...
+Current configuration number is 1
+Use interface number 0
+ with class 8
+Warning: no switching method given. See documentation
+-> Run lsusb to note any changes. Bye!
+
+$ sudo sg_readcap -l /dev/sg1
+bad field in READ CAPACITY (16) cdb including unsupported service action
+sg_readcap failed: Illegal request
+
+p$ sudo sg_logs -a /dev/sg1
+    DV17       DEVICE V1.00     1.00
+log_sense: field in cdb illegal
+sg_logs failed: Illegal request
+
+$ sudo usbreset 1224:2725
+Resetting USB PHY 2.0 ... ok
+
+$ udevadm info --query=all --name=/dev/sdb
+P: /devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.2/1-11.2.2:1.0/host6/target6:0:0/6:0:0:0/block/sdb
+N: sdb
+L: 0
+S: disk/by-path/pci-0000:00:14.0-usb-0:11.2.2:1.0-scsi-0:0:0:0
+S: disk/by-id/usb-DV17_DEVICE_V1.00-0:0
+E: DEVPATH=/devices/pci0000:00/0000:00:14.0/usb1/1-11/1-11.2/1-11.2.2/1-11.2.2:1.0/host6/target6:0:0/6:0:0:0/block/sdb
+E: DEVNAME=/dev/sdb
+E: DEVTYPE=disk
+E: DISKSEQ=30
+E: MAJOR=8
+E: MINOR=16
+E: SUBSYSTEM=block
+E: USEC_INITIALIZED=153105565577
+E: ID_VENDOR=DV17
+E: ID_VENDOR_ENC=DV17\x20\x20\x20\x20
+E: ID_VENDOR_ID=1224
+E: ID_MODEL=DEVICE_V1.00
+E: ID_MODEL_ENC=\x20DEVICE\x20V1.00\x20\x20\x20
+E: ID_MODEL_ID=2725
+E: ID_REVISION=1.00
+E: ID_SERIAL=DV17_DEVICE_V1.00-0:0
+E: ID_TYPE=disk
+E: ID_INSTANCE=0:0
+E: ID_BUS=usb
+E: ID_USB_INTERFACES=:080650:
+E: ID_USB_INTERFACE_NUM=00
+E: ID_USB_DRIVER=usb-storage
+E: ID_PATH=pci-0000:00:14.0-usb-0:11.2.2:1.0-scsi-0:0:0:0
+E: ID_PATH_TAG=pci-0000_00_14_0-usb-0_11_2_2_1_0-scsi-0_0_0_0
+E: DEVLINKS=/dev/disk/by-path/pci-0000:00:14.0-usb-0:11.2.2:1.0-scsi-0:0:0:0 /dev/disk/by-id/usb-DV17_DEVICE_V1.00-0:0
+E: TAGS=:systemd:
+E: CURRENT_TAGS=:systemd:
+
+$ lsusb -t
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/10p, 10000M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/16p, 480M
+    |__ Port 2: Dev 2, If 0, Class=Hub, Driver=hub/3p, 480M
+        |__ Port 1: Dev 4, If 1, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 1: Dev 4, If 2, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 1: Dev 4, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 3: Dev 59, If 2, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 3: Dev 59, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 3: Dev 59, If 3, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 3: Dev 59, If 1, Class=Human Interface Device, Driver=usbhid, 12M
+    |__ Port 9: Dev 58, If 0, Class=Video, Driver=uvcvideo, 480M
+    |__ Port 9: Dev 58, If 1, Class=Video, Driver=uvcvideo, 480M
+    |__ Port 9: Dev 58, If 2, Class=Video, Driver=uvcvideo, 480M
+    |__ Port 9: Dev 58, If 3, Class=Audio, Driver=snd-usb-audio, 480M
+    |__ Port 9: Dev 58, If 4, Class=Audio, Driver=snd-usb-audio, 480M
+    |__ Port 11: Dev 3, If 0, Class=Hub, Driver=hub/4p, 480M
+        |__ Port 3: Dev 8, If 0, Class=Wireless, Driver=btusb, 12M
+        |__ Port 3: Dev 8, If 1, Class=Wireless, Driver=btusb, 12M
+        |__ Port 2: Dev 60, If 0, Class=Hub, Driver=hub/7p, 480M
+            |__ Port 4: Dev 62, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+            |__ Port 4: Dev 62, If 3, Class=Human Interface Device, Driver=usbhid, 12M
+            |__ Port 4: Dev 62, If 1, Class=Human Interface Device, Driver=usbhid, 12M
+            |__ Port 4: Dev 62, If 2, Class=Human Interface Device, Driver=usbhid, 12M
+            |__ Port 2: Dev 64, If 0, Class=Mass Storage, Driver=usb-storage, 480M
+            |__ Port 7: Dev 63, If 0, Class=Vendor Specific Class, Driver=, 480M
+            |__ Port 3: Dev 61, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+    |__ Port 12: Dev 5, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+Ok, after figuring out how to make this thing work, I had some extra stuff to clean up. 
+my x11 conf files got pretty cluttered, and I had to fix all the configs to get this working on both screens. 
+Configuring x11 to work proper with or without the keyboard was complictated, so I did something else.
+
+First, I cleand up all the bugus configs in /etc/X11/xorg.conf.d/
+I got rid of all the config files there, with the plan to use xrandr to configure the displays.
+
+in my local path /home/user/bin I made this script:
+
+#!/bin/bash
+export DISPLAY=:0
+# Saved as displayLink.sh marked executable
+# Wait for the DisplayLink device to show up
+for i in {1..10}; do
+  if xrandr | grep -q "DVI-I-2"; then
+    break
+  fi
+  sleep 1
+done
+
+# Add mode if not already present
+xrandr | grep -q "1920x440_60.00" || \
+  xrandr --newmode "1920x440_60.00" 58.25 1920 1968 2168 2416 440 443 453 460 -hsync +vsync
+
+# Add mode to the DisplayLink device
+xrandr --addmode DVI-I-2 "1920x440_60.00"
+
+# Position it to the right you can move it in the gui later if you want
+xrandr --output DVI-I-2 --mode "1920x440_60.00" --right-of HDMI-1
+
+
+so then I made the folder ~/.config/autostart
+and made the file displayLink.desktop
+in this file:
+
+[Desktop Entry]
+Type=Application
+Exec=/home/l/bin/displayLink.sh
+Hidden=false
+NoDisplay=false
+X-MATE-Autostart-enabled=true
+Name=DisplayLink Setup
+
+
+then rebooted.
+When i rebooted, the display just works. if  it is unplugged everything keeps working. 
+the design is very human, doesnt break, and is easy to use with the xrandr gui.
+
+I tried lots of things, to make this work, got a long list of what not to do.
+
+the autostart system is very flexible, you can make it work on gnome or whatver 
+
