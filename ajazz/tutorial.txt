@@ -1,0 +1,50 @@
+install display link software.
+https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
+either create the repo, or use the shell script installer. also available from this repo.
+ Install other package dependencies:
+sudo apt install libxrandr-dev i2c-tools evdi-dkms dkms libdrm-dev libssl-dev  displaylink-driver xdg-utils
+
+create the autostart directory in $HOME/.config/autostart 
+$touch displayLink.desktop
+write this into the displayLink.desktop
+
+Type=Application
+Exec=/home/l/bin/displayLink.sh
+Hidden=false
+NoDisplay=false
+X-MATE-Autostart-enabled=true
+Name=DisplayLink Setup
+
+
+# note that XDG-utils does not support use enviornmental variables, you must use absolute paths.
+
+
+# create this shell script displayLink.sh
+
+#!/bin/bash
+export DISPLAY=:0
+
+# Wait for the DisplayLink device to show up
+for i in {1..10}; do
+  if xrandr | grep -q "DVI-I-2"; then
+    break
+  fi
+  sleep 1
+done
+
+# Add mode if not already present
+xrandr | grep -q "1920x440_60.00" || \
+  xrandr --newmode "1920x440_60.00" 58.25 1920 1968 2168 2416 440 443 453 460 -hsync +vsync
+
+# Add mode to the DisplayLink device
+xrandr --addmode DVI-I-2 "1920x440_60.00"
+
+# Position it to the right of your TV (adjust if needed)
+xrandr --output DVI-I-2 --mode "1920x440_60.00" --right-of HDMI-1
+
+
+
+###############################
+Reboot. The display link driver will load, and the autostart config file will load the relivent configurations if presnt. 
+No port for for wayland yet, I invite you to solve for this. 
+maybe wlr-randr?
